@@ -14,3 +14,9 @@ function printMyName(name) {
 }
 
 printMyName('Max');
+
+const printMyNameAgain = (name) => {
+    console.log(name);
+}
+
+printMyNameAgain('Lukas');
