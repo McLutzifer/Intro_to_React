@@ -8,6 +8,16 @@ const person = {
 };
 
 const secondPerson = person;
-person.name = 'Manu';
+
 
 console.log(secondPerson);   //prints 'Manu' because copies pointer
+
+// to really copy an object use spread operator
+const thirdPerson = {
+    ...person
+};
+
+person.name = 'Manu';
+
+console.log(secondPerson)
+console.log(thirdPerson)
