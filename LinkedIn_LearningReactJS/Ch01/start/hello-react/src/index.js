@@ -2,25 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Hello(props) {
-  console.log(Object.keys(props));
+function Lake(props) {
+  return <h1>{props.name}</h1>
+}
+
+function App() {
   return (
-   <div>
-    <h1>Welcome to {props.library}</h1>
-    <p>Let's build something cool.</p>
-    <p>{props.message}</p>
-    <p>{props.number} Props total</p>
+    <div>
+      <Lake name="Lake Tahoe" />
+      <Lake name="Angora Lake" />
+      <Lake name="Shirley Lake" />
     </div>
   )
-    }
-
+}
 
 
 ReactDOM.render(
-  <Hello 
-  library="React" 
-  message="Have fun!"
-  number={3}></Hello>,
-  
+  <App />,  
   document.getElementById('root')
 );
