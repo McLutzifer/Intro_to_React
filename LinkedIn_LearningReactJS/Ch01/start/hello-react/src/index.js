@@ -2,22 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Hello() {
+function Hello(props) {
+  console.log(props);
   return (
    <div>
-    <h1>Welcome to React</h1>
+    <h1>Welcome to {props.library}</h1>
     <p>Let's build something cool.</p>
+    <p>{props.message}</p>
+    <p>{props.number} Props total</p>
     </div>
   )
     }
 
-let city = {
-  name: "Madrid",
-  country: "Spain"
-};
+
 
 ReactDOM.render(
-  <Hello></Hello>,
+  <Hello 
+  library="React" 
+  message="Have fun!"
+  number={3}></Hello>,
   
   document.getElementById('root')
 );
