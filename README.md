@@ -3,4 +3,5 @@
 ______________________________
 * Udemy    
 * SoloLearn  
-* LinkedIn Learning
+* LinkedIn Learning  
+* React - Das umfassende Handbuch
