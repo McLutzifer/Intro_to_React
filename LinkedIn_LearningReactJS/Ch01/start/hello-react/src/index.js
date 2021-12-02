@@ -2,14 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-let city = {
-  name: "Madrid",
-  country: "Spain"
-};
+const lakeList = [
+  { id: "1", name: "Echo", trailhead: "Echo" },
+  { id: "2", name: "Maud", trailhead: "Wrights" },
+  { id: "3", name: "Velma", trailhead: "Bayview" }
+];
+
+function App( {lakes} ) {
+  return (
+    <div>
+      {lakes.map(lake => (
+        <div key={lake.id}>
+          <h2>{lake.name}</h2>
+          <p>Accessed by: {lake.trailhead}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 
 ReactDOM.render(
-  <h1>{city.name} is in {city.country}</h1>,
+  <App lakes={lakeList}/>,  
   document.getElementById('root')
 );
-
-
