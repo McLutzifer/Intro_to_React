@@ -1,6 +1,6 @@
 # Tutorials to learn React
 
 ______________________________
-[*] Udemy
-[*] SoloLearn
+ Udemy \\ 
+ [*] SoloLearn
 [*] LinkedIn Learning
