@@ -13,9 +13,8 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
       <p>This is also visible</p>
-      <Expenses 
-        
-      ></ExpenseItem>
+      <Expenses prop={expenses[0]}
+      ></Expenses>
       <ExpenseItem
         title={expenses[1].title}
         amount={expenses[1].amount}
