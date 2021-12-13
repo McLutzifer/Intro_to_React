@@ -12,7 +12,7 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
       <p>This is also visible</p>
-      <Expenses item={expenses}/>
+      <Expenses item={expenses} />
     </div>
   );
 }
