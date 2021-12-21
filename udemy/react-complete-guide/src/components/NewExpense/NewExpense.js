@@ -1,9 +1,11 @@
 import React from "react";
 
+import './NewExpense.css';
+
 const NewExpense = () => {
-    return <div>
+    return <div className="new-expense">
         <form>
-            
+
         </form>
     </div>
 };
