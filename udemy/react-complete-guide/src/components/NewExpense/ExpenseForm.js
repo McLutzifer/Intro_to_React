@@ -22,11 +22,21 @@ setuserInput({
   };
 
   const amountChangeHandler = (event) => {
-    setEnteredAmount(event.target.value);
+  //  setEnteredAmount(event.target.value);
+    setuserInput({
+      ...userInput,
+      setEnteredAmount: event.target.value,
+      
+        })
   };
 
   const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
+//    setEnteredDate(event.target.value);
+setuserInput({
+  ...userInput,
+  setEnteredDate: event.target.value,
+  
+    })
   };
 
 
