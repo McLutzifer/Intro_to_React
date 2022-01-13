@@ -2,6 +2,11 @@ import React from 'react';
 
 import './ExpensesFilter.css';
 
+
+const hui = (props) => {
+    console.log(props.addFilterHandler)
+}
+
 const ExpensesFilter = () => {
   return (
     <div className='expenses-filter'>
