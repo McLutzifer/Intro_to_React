@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React, { useState} from "react";
-
-import "./ExpenseForm.css";
-
-const ExpenseForm = () => {
-  const [enteredTitle, setEnteredTitle] = useState('');
-  const [enteredAmount, setEnteredAmount] = useState('');
-  const [enteredDate, setEnteredDate] = useState('');
-
-  const titleChangeHandler = (event) => {
-    setEnteredTitle(event.target.value);
-=======
 import React, { useState } from "react";
 
 import "./ExpenseForm.css";
@@ -34,29 +21,22 @@ const ExpenseForm = (props) => {
     // setuserInput((prevState) => {
     //   return { ...prevState, setEnteredTitle: event.target.value }; 
     // });
->>>>>>> 223446671e196cfc19c5179b22fd97f421cb5a63
   };
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
-<<<<<<< HEAD
-=======
     // setuserInput({
     //   ...userInput,
     //   setEnteredAmount: event.target.value,
     // })
->>>>>>> 223446671e196cfc19c5179b22fd97f421cb5a63
   };
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
-<<<<<<< HEAD
-=======
     // setuserInput({
     //   ...userInput,
     //   setEnteredDate: event.target.value,
     // })
->>>>>>> 223446671e196cfc19c5179b22fd97f421cb5a63
   };
 
 const submitHandler = (event) => {
@@ -86,13 +66,6 @@ const submitHandler = (event) => {
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-<<<<<<< HEAD
-          <input type="number" min="0.01" step="0.01" onChange={amountChangeHandler} />
-        </div>
-        <div className="new-expense__control">
-          <label>Date</label>
-          <input type="date" min="2019-01-01" step="2022-12-31" onChange={dateChangeHandler}/>
-=======
           <input 
           type="number" 
           min="0.01" 
@@ -110,7 +83,6 @@ const submitHandler = (event) => {
           value={enteredDate}
           onChange={dateChangeHandler}
           />
->>>>>>> 223446671e196cfc19c5179b22fd97f421cb5a63
         </div>
       </div>
       <div className="new-expense__actions">
