@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState} from "react";
 
 import "./ExpenseForm.css";
@@ -9,30 +10,107 @@ const ExpenseForm = () => {
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
+=======
+import React, { useState } from "react";
+
+import "./ExpenseForm.css";
+
+const ExpenseForm = (props) => {
+  const [enteredTitle, setEnteredTitle] = useState('');
+  const [enteredAmount, setEnteredAmount] = useState('');
+  const [enteredDate, setEnteredDate] = useState('');
+  // const [userInput, setuserInput] = useState({
+  //   setEnteredTitle: '',
+  //   setEnteredAmount: '',
+  //   setEnteredDate: ''
+  // });
+
+  const titleChangeHandler = (event) => {
+    setEnteredTitle(event.target.value);
+    //  setuserInput({
+    //     ...userInput,
+    //    setEnteredTitle: event.target.value,
+    //   });
+    // setuserInput((prevState) => {
+    //   return { ...prevState, setEnteredTitle: event.target.value }; 
+    // });
+>>>>>>> 223446671e196cfc19c5179b22fd97f421cb5a63
   };
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
+<<<<<<< HEAD
+=======
+    // setuserInput({
+    //   ...userInput,
+    //   setEnteredAmount: event.target.value,
+    // })
+>>>>>>> 223446671e196cfc19c5179b22fd97f421cb5a63
   };
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
+<<<<<<< HEAD
+=======
+    // setuserInput({
+    //   ...userInput,
+    //   setEnteredDate: event.target.value,
+    // })
+>>>>>>> 223446671e196cfc19c5179b22fd97f421cb5a63
   };
 
+const submitHandler = (event) => {
+  event.preventDefault();
+
+  const expenseData = {
+    title: enteredTitle,
+    amount: enteredAmount,
+    date: new Date(enteredDate)
+  };
+
+  props.onSaveExpenseData(expenseData);
+  setEnteredTitle('');
+  setEnteredAmount('');
+  setEnteredDate('');
+};
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input 
+          type="text" 
+          value={enteredTitle} 
+          onChange={titleChangeHandler} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
+<<<<<<< HEAD
           <input type="number" min="0.01" step="0.01" onChange={amountChangeHandler} />
         </div>
         <div className="new-expense__control">
           <label>Date</label>
           <input type="date" min="2019-01-01" step="2022-12-31" onChange={dateChangeHandler}/>
+=======
+          <input 
+          type="number" 
+          min="0.01" 
+          step="0.01"
+          value={enteredAmount}
+          onChange={amountChangeHandler}
+          />
+        </div>
+        <div className="new-expense__control">
+          <label>Date</label>
+          <input 
+          type="date" 
+          min="2019-01-01" 
+          step="2022-12-31" 
+          value={enteredDate}
+          onChange={dateChangeHandler}
+          />
+>>>>>>> 223446671e196cfc19c5179b22fd97f421cb5a63
         </div>
       </div>
       <div className="new-expense__actions">
